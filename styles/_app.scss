@@ -26,6 +26,7 @@
         display: flex;
         margin-left: 1.5rem;
         width: 100%;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
         input{
           font-size: 1rem;
           height: 2rem;
@@ -38,6 +39,9 @@
             font-size: 18px;
             color: #999999;
             opacity: 0.8;
+          }
+          &:focus {
+            outline: none;
           }
         }
         button {
@@ -63,7 +67,7 @@
     border-radius: 4px;
     background-color: white;
     width: 80%;
-    margin-top: 20px;
+    margin: 20px 0;
   }
 }
 

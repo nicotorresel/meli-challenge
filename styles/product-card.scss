@@ -29,7 +29,7 @@
   }
 }
 
-hr {
-  margin: 0 32px;
-  border: 1px solid #EEEEEE;
+.card::not(first-child) {
+  border-bottom: thin solid #EEEEEE;
 }
+
