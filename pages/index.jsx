@@ -12,7 +12,13 @@ const IndexPage = ({results}) => {
         <div className="container">
           {results.map((product) => {
             return (
-              <ProductCard image={product.image} alt={product.title} price={product.price} detail={product.title} location={product.location} />
+              <ProductCard
+                key={product.id}
+                image={product.image} 
+                alt={product.title} 
+                price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
+                detail={product.title} 
+                location={product.location} />
             );
           })}
         </div>
