@@ -53,3 +53,17 @@
   }
 }
 
+.background {
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    border-radius: 4px;
+    background-color: white;
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+

@@ -2,6 +2,7 @@ import React from "react";
 import {AppProps} from "next/app";
 import {useRouter} from "next/router";
 import '../styles/_app.scss'
+import '../styles/product-card.scss';
 
 const App = ({ Component, pageProps }) => {
 

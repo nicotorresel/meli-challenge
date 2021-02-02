@@ -1,5 +1,6 @@
 import React from "react";
 import { GetServerSideProps } from "next";
+import ProductCard from "../product/components/product-card"
 import api from "../product/api";
 
 
@@ -7,14 +8,15 @@ const IndexPage = ({results}) => {
   console.log({results});
   return (
     <React.Fragment> 
-      {results.map((product) => {
-        return (
-          <div>
-            <img src={product.image} alt={product.title}/>
-
-          </div>
-        );
-      })}
+      <div className="background">
+        <div className="container">
+          {results.map((product) => {
+            return (
+              <ProductCard image={product.image} alt={product.title} price={product.price} detail={product.title} location={product.location} />
+            );
+          })}
+        </div>
+      </div>
     </React.Fragment>
   );
 }
