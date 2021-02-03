@@ -1,8 +1,9 @@
 import React from "react";
-import {AppProps} from "next/app";
 import {useRouter} from "next/router";
-import '../styles/_app.scss'
+import Link from "next/link";
+import '../styles/_app.scss';
 import '../styles/product-card.scss';
+import '../styles/product-detail.scss';
 
 const App = ({ Component, pageProps }) => {
 
@@ -19,7 +20,11 @@ const App = ({ Component, pageProps }) => {
       <div className="nav">
         <div className="container">
           <div className="searchBar">
-            <img src="./Logo_ML.png" />
+            <Link href="/">
+              <a>
+                <img src="./Logo_ML.png" />
+              </a>
+            </Link>
             <form onSubmit={handleSubmit} className="searchBar__input">
               <input name="query" placeholder="Nunca dejes de buscar" />
               <button>

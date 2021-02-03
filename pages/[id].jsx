@@ -1,21 +1,21 @@
 import React from "react";
-import { GetServerSideProps } from "next";
-import ProductCard from "../product/components/product-card"
-import Link from "next/link"; 
+import ProductDetail from "../product/components/product-detail";
 import api from "../product/api";
 
 
 const IndexPage = ({result}) => {
-  
-  console.log({result});
 
   return (
     <React.Fragment> 
       <div className="background">
-        <div className="container">
-
-          HOlaaa
-          
+        <div className="container detail">
+          <ProductDetail 
+            image={result.image}
+            alt={result.title}
+            title={result.title}
+            price={result.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
+            description={result.title}
+          />        
         </div>
       </div>
     </React.Fragment>

@@ -95,6 +95,9 @@ a:link, a:visited, a:active {
     background-color: white;
     width: 80%;
     margin: 20px 0;
+    &.detail {
+      background-color: #EEEEEE;
+    }
   }
 }
 

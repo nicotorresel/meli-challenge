@@ -1,5 +1,4 @@
 import React from "react";
-import { GetServerSideProps } from "next";
 import ProductCard from "../product/components/product-card"
 import Link from "next/link"; 
 import api from "../product/api";

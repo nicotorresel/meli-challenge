@@ -20,7 +20,7 @@ export default {
     .then((rawProduct) => ({
       id: rawProduct.id,
       title: rawProduct.title,
-      image: rawProduct.thumbnail,
+      image: rawProduct.pictures[0].url,
       price: rawProduct.price,
       // location: rawProduct.address.state_name
     }),
