@@ -6,6 +6,7 @@ class ProductCard extends React.Component {
       <React.Fragment>
         <div className="card">
           <div className="card__detail">
+            <div className="card__detail-image"></div>
             <img src={this.props.image} alt={this.props.alt}/>
             <div className="card__detail-description">
               <p className="card__detail-description__price">{this.props.price}</p>

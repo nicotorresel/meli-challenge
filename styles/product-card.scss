@@ -1,8 +1,13 @@
 .card {
   display: flex;
   justify-content: space-between;
-  margin: 32px 16px;
+  margin: 16px 16px;
+  border-bottom: thin solid #EEEEEE;
 
+  &:last-child{
+    border-bottom: none;
+  }
+  
   .card__detail {
     display: flex;
 
@@ -15,9 +20,11 @@
     }
 
     .card__detail-description {
+      color: #333333;
       .card__detail-description__price {
         font-size: 24px;
         margin-bottom: 32px;
+        margin-top: 16px;
       }
       .card__detail-description__desc {
         font-size: 18px;
@@ -25,11 +32,10 @@
     }
   }
   .location {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 16px;
     margin-right: 100px;
   }
-}
-
-.card::not(first-child) {
-  border-bottom: thin solid #EEEEEE;
 }
 

@@ -1,24 +1,29 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import ProductCard from "../product/components/product-card"
+import Link from "next/link"; 
 import api from "../product/api";
 
 
 const IndexPage = ({results}) => {
-  console.log({results});
   return (
     <React.Fragment> 
       <div className="background">
         <div className="container">
           {results.map((product) => {
-            return (
-              <ProductCard
-                key={product.id}
-                image={product.image} 
-                alt={product.title} 
-                price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-                detail={product.title} 
-                location={product.location} />
+            return ( 
+              <Link key={product.id} href={`/${product.id}`}>
+                <a>
+                  <ProductCard
+                    key={product.id}
+                    image={product.image} 
+                    alt={product.title} 
+                    price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
+                    detail={product.title} 
+                    location={product.location} 
+                  />
+                </a>
+              </Link>
             );
           })}
         </div>

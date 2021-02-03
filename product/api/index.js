@@ -9,12 +9,21 @@ export default {
         image: rawProduct.thumbnail,
         price: rawProduct.price,
         location: rawProduct.address.state_name
-      })),
+      })), 
       );
   },
       
   
   fetch: (id) => {
-    return Promise.resolve(null);
+    return fetch(`https://api.mercadolibre.com/items/${id}`)
+    .then(res => res.json())
+    .then((rawProduct) => ({
+      id: rawProduct.id,
+      title: rawProduct.title,
+      image: rawProduct.thumbnail,
+      price: rawProduct.price,
+      // location: rawProduct.address.state_name
+    }),
+    )
   }
 }
