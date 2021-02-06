@@ -1,7 +1,6 @@
 .main {
   display: flex;
   justify-content: space-between;
-
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -11,19 +10,18 @@
     width: 680px;
     height: 680px;
     object-fit: contain;
-
     @media only screen and (max-width: 768px) {
       width: 300px;
       height: 300px;
     }
   }
+
   .description {
     display: flex;
     flex-direction: column;
     width: 300px;
     margin-right: 32px;
     margin-top: 16px;
-
     @media only screen and (max-width: 768px) {
       display: flex;
       justify-content: center;
@@ -35,11 +33,19 @@
     h1 {
       margin-bottom: 16px;
       font-size: 24px;
+      @media only screen and (max-width:768px) {
+        font-size: 20px;
+      }
     }
+
     h2 {
       font-size: 42px;
       margin: 32px 0;
+      @media only screen and (max-width:768px) {
+        font-size: 28px;
+      }
     }
+
     button {
       font-size: 16px;
       margin-right: 32px;
@@ -48,11 +54,9 @@
       border-radius: 4px;
       color: white;
       background-color: #3483FA;
-
       @media only screen and (max-width:768px){
         margin: 0px
       }
-
     }
   }
 }
@@ -60,12 +64,24 @@
 .description__more {
   margin-left: 32px;
   margin-top: 32px;
+  @media only screen and (max-width:768px) {
+    margin: 16px;
+    text-align: center;
+  }
+
   h3 {
     font-size: 28px;
     margin-bottom: 32px;
+    @media only screen and (max-width:768px) {
+      font-size: 20px;
+    }
   }
+
   p {
     font-size: 16px;
     margin-bottom: 32px;
+    @media only screen and (max-width:768px) {
+      font-size: 12px;
+    }
   }
 }
