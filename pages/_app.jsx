@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import {useRouter} from "next/router";
 import Link from "next/link";
 import '../styles/_app.scss';
@@ -16,7 +17,12 @@ const App = ({ Component, pageProps }) => {
   }
 
   return (
+    
     <React.Fragment>
+      <Head>
+        <title>Meli Challenge</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="nav">
         <div className="container">
           <div className="searchBar">

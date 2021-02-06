@@ -6,7 +6,7 @@ import api from "../product/api";
 
 const IndexPage = ({results}) => {
   return (
-    <React.Fragment> 
+    <React.Fragment>       
       <div className="background">
         <div className="container">
           {results.map((product) => {
