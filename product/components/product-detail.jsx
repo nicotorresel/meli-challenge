@@ -2,19 +2,22 @@ import React from "react";
 
 class ProductDetail extends React.Component {
   render() {
+
+    const {image, alt, title, price, description} = this.props;
+
     return (
       <React.Fragment>
         <div className="main">
-          <img src={this.props.image} alt={this.props.alt}/>
+          <img src={image} alt={alt}/>
           <div className="description">
-            <h1>{this.props.title}</h1>
-            <h2>{this.props.price}</h2>
+            <h1>{title}</h1>
+            <h2>{price}</h2>
             <button>Comprar</button>
           </div>
         </div>
         <div className="description__more">
           <h3>Descripción del producto</h3>
-          <p>{this.props.description}</p>
+          <p>{description}</p>
         </div>
       </React.Fragment>
     );
