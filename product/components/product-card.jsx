@@ -3,7 +3,8 @@ import React from "react";
 class ProductCard extends React.Component {
   render() {
 
-    const {image, alt, price, detail, location} = this.props;
+    const { product } = this.props
+    const { image, alt, price, title, location } = product;
 
     return (
       <React.Fragment>
@@ -12,8 +13,8 @@ class ProductCard extends React.Component {
             <div className="card__detail-image"></div>
             <img src={image} alt={alt}/>
             <div className="card__detail-description">
-              <p className="price">{price}</p>
-              <p className="desc>"> {detail}</p>
+              <p className="price">{price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}</p>
+              <p className="desc>"> {title}</p>
             </div>
 
           </div>

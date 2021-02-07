@@ -14,12 +14,13 @@ const IndexPage = ({results}) => {
               <Link key={product.id} href={`/${product.id}`}>
                 <a>
                   <ProductCard
-                    key={product.id}
-                    image={product.image} 
-                    alt={product.title} 
-                    price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-                    detail={product.title} 
-                    location={product.location} 
+                    product={product}
+                    // key={product.id}
+                    // image={product.image} 
+                    // alt={product.title} 
+                    // price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
+                    // detail={product.title} 
+                    // location={product.location} 
                   />
                 </a>
               </Link>
