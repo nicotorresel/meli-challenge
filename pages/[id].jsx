@@ -9,12 +9,13 @@ const IndexPage = ({result}) => {
     <React.Fragment> 
       <div className="background">
         <div className="container detail">
-          <ProductDetail 
-            image={result.image}
-            alt={result.title}
-            title={result.title}
-            price={result.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-            description={result.title}
+          <ProductDetail
+            product={result}
+            // image={result.image}
+            // alt={result.title}
+            // title={result.title}
+            // price={result.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
+            // description={result.title}
           />        
         </div>
       </div>
@@ -27,7 +28,7 @@ export const getServerSideProps = async ({query}) => {
   
   return {
     props: {
-      result,
+      result
     },
   };
 }; 

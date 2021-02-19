@@ -12,7 +12,6 @@ const App = ({ Component, pageProps }) => {
 
   function handleSubmit(event){
     event.preventDefault();
-
     router.push(`/?q=${event.target["query"].value}`);
   }
 
@@ -22,7 +21,10 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>Meli Challenge</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="La comunidad de compra y venta online más grande de América Latina." />
       </Head>
+
+      {/* Agregue el nav a nivel app ya que se deberia renderizar en todas las vistas */}
       <div className="nav">
         <div className="container">
           <div className="searchBar">

@@ -39,10 +39,24 @@
       }
       color: #333333;
 
-      .price {
-        font-size: 24px;
-        margin-bottom: 32px;
-        margin-top: 16px;
+      .shipping {
+        display: flex;
+        justify-content: center;
+        height: 30%;
+        width: 200px;
+        @media only screen and (max-width: 768px) {
+          margin-left: 20px;
+          width: auto;
+        }
+
+        .price {
+          font-size: 24px;
+          margin-bottom: 32px;
+          margin-top: 16px;
+        }
+        img {
+          height: 20px;
+        }
       }
 
       .desc {
