@@ -25,7 +25,6 @@ const IndexPage = ({result}) => {
 
 export const getServerSideProps = async ({query}) => {
   const result = await api.fetch(query.id);
-  
   return {
     props: {
       result,
