@@ -12,12 +12,13 @@ const App = ({ Component, pageProps }) => {
 
   function handleSubmit(event){
     event.preventDefault();
-    router.push(`/?q=${event.target["query"].value}`);
+    router.push(`/?search=${event.target["query"].value}`);
   }
 
   return (
-    
     <React.Fragment>
+
+      {/* Agregue un head para poder manejar el viewport y hacer reponsive la pagina*/}
       <Head>
         <title>Meli Challenge</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -43,8 +44,7 @@ const App = ({ Component, pageProps }) => {
         </div>
       </div>
       <Component {...pageProps} />
-    </React.Fragment>
-    
+    </React.Fragment>  
   )
 }
 

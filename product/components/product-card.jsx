@@ -28,7 +28,6 @@ import React from "react";
 //   }
 // }
 
-
 //paso el componente a uno funcional:
 
 const ProductCard = ( {product} ) => {
