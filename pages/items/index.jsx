@@ -12,7 +12,7 @@ const IndexPage = ({results}) => {
           <div className="container">
             {results.map((product) => {
               return (
-                <Link key={product.id} href={`items/${product.id}`}>
+                <Link key={product.id} href={`/items/${product.id}`}>
                   <a>
                     <ProductCard
                       product={product}
