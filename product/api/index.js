@@ -16,22 +16,6 @@ export default {
       })), 
       );
   },
-      
-  // fetch: (id) => {
-  //   return fetch(`https://api.mercadolibre.com/items/${id}`)
-  //   .then(res => res.json())
-  //   .then((rawProduct) => ({
-  //     author: "Nicolas Torresel",
-  //     id: rawProduct.id,
-  //     title: rawProduct.title,
-  //     image: rawProduct.pictures[0].url,
-  //     price: rawProduct.price,
-  //     currency: rawProduct.currency_id,
-  //     condition: rawProduct.condition,
-  //     sold_quantity: rawProduct.sold_quantity,
-  //     //description:
-  //   }))
-  // },
 
   fetch: (id) => {
     return new Promise(resolve => {
