@@ -11,11 +11,6 @@ const IndexPage = ({result}) => {
         <div className="container detail">
           <ProductDetail
             product={result}
-            // image={result.image}
-            // alt={result.title}
-            // title={result.title}
-            // price={result.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-            // description={result.title}
           />        
         </div>
       </div>

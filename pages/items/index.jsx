@@ -16,12 +16,6 @@ const IndexPage = ({results}) => {
                   <a>
                     <ProductCard
                       product={product}
-                      // key={product.id}
-                      // image={product.image} 
-                      // alt={product.title} 
-                      // price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-                      // detail={product.title} 
-                      // location={product.location} 
                     />
                   </a>
                 </Link>
