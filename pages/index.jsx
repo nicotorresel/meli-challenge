@@ -1,48 +1,19 @@
 import React from "react";
-import Link from "next/link"; 
-import api from "../product/api";
-import ProductCard from "../product/components/product-card";
+import Link from "next/link";
 
 const IndexPage = ({results}) => {
 
   return (
     <React.Fragment>
       <div className="background">
-        { results.length ?   
-          <div className="container">
-            {results.map((product) => {
-              return (
-                <Link key={product.id} href={`/${product.id}`}>
-                  <a>
-                    <ProductCard
-                      product={product}
-                      // key={product.id}
-                      // image={product.image} 
-                      // alt={product.title} 
-                      // price={product.price.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})} 
-                      // detail={product.title} 
-                      // location={product.location} 
-                    />
-                  </a>
-                </Link>
-              );
-            })} 
-          </div>
-          : <p>No se encontraron resultados</p>
-        }
+        <Link href="items/?search=ofertas">
+          <a>
+            <img src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mla-home-desktop-slider-picture-7e0f25a5-df8d-4bc2-9215-0aa331f1d097.jpg"/>
+          </a>
+        </Link>
       </div>
     </React.Fragment>
   );
-}
-
-export const getServerSideProps = async ({query}) => {
-  const results = await api.search(query.search);
-
-  return {
-    props: {
-      results,
-    },
-  };
-}; 
+  }
 
 export default IndexPage;

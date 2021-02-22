@@ -12,7 +12,7 @@ const App = ({ Component, pageProps }) => {
 
   function handleSubmit(event){
     event.preventDefault();
-    router.push(`/?search=${event.target["query"].value}`);
+    router.push(`items/?search=${event.target["query"].value}`);
   }
 
   return (

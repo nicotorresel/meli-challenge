@@ -1,6 +1,6 @@
 import React from "react";
-import ProductDetail from "../product/components/product-detail";
-import api from "../product/api";
+import ProductDetail from "../../product/components/product-detail";
+import api from "../../product/api";
 
 
 const IndexPage = ({result}) => {
