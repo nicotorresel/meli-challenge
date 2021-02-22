@@ -24,12 +24,11 @@ import React from "react";
 //   }
 // }
 
-
 // tenia el componente escrito con clases y lo pase a componentes funcionales
 const ProductDetail = ({ product }) => {
 
-  const { image, alt, title, price, currency, description, condition, sold_quantity } = product;
-
+  const { image, alt, title, price, description, currency, condition, sold_quantity } = product;
+  console.log(product);
   const moneda = {
     style: "currency",
     currency: currency
@@ -52,7 +51,7 @@ const ProductDetail = ({ product }) => {
       </div>
       <div className="description__more">
         <h3>Descripción del producto</h3>
-        <p>{title}</p>
+        <p>{description}</p>
       </div>
     </React.Fragment>
   );
