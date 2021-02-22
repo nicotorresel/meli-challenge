@@ -28,7 +28,6 @@ import React from "react";
 const ProductDetail = ({ product }) => {
 
   const { image, alt, title, price, description, currency, condition, sold_quantity } = product;
-  console.log(product);
   const moneda = {
     style: "currency",
     currency: currency
