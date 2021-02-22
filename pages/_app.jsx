@@ -31,13 +31,13 @@ const App = ({ Component, pageProps }) => {
           <div className="searchBar">
             <Link href="/">
               <a>
-                <img src="./Logo_ML.png" />
+                <img src="../Logo_ML.png" />
               </a>
             </Link>
             <form onSubmit={handleSubmit} className="searchBar__input">
               <input name="query" placeholder="Nunca dejes de buscar" />
               <button>
-                <img src="./ic_Search.png" alt="busqueda"/>
+                <img src="../ic_Search.png" alt="busqueda"/>
               </button>
             </form>
           </div>   
